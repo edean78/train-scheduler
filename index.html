@@ -9,8 +9,9 @@
     <!-- Create link to reset css file -->
     <link rel="stylesheet" type="text/stylesheet" href="assets/css/reset.css">
 
-    <!-- Create link to materialize css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Create link to bootsrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Create link to style css -->
     <link rel="stylesheet" type="text/stylesheet" href="assets/css/style.css">
@@ -20,7 +21,99 @@
 
 <body>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron text-center">
+                    <h1>Train Scheduler</h1>
+                </div>
+            </div>
+        </div>
 
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Train Schedule</div>
+            <div class="panel-body">
+
+                <!-- Table -->
+                <table class="table table-striped" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Add Train to Schedule</div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="trainNameInput">Train Name</label>
+                        <input type="trainName" class="form-control" id="trainNameInput" aria-describedby="InputTrainName"
+                            placeholder="Enter Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationInput">Destination</label>
+                        <input type="destination" class="form-control" id="destinationInput"
+                            aria-describedby="InputDestination" placeholder="Enter Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencyInput">Frequency(min)</label>
+                        <input type="frequency" class="form-control" id="frequencyInput"
+                            aria-describedby="InputFrequency" placeholder="Enter Frequency (min)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nextArrivalInput">Frequency(min)</label>
+                        <input type="nextArrival" class="form-control" id="nextArrivalInput"
+                            aria-describedby="InputNextArrival" placeholder="Enter Next Arrival">
+                    </div>
+                    <div class="form-group">
+                        <label for="minutesAwayInput">Minutes Away</label>
+                        <input type="minutesAway" class="form-control" id="minutesAwayInput"
+                            aria-describedby="InputMinutesAway" placeholder="Enter Minutes Away">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
 
 
 
@@ -38,9 +131,6 @@
     <!-- Added link to JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Added link to javascript file -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
