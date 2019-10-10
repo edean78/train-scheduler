@@ -3,7 +3,7 @@
 
     // Your web app's Firebase configuration
     var config = {
-        apiKey: "AIzaSyCynWVZa4c50o3U0LXoKlAGnh2bHcfQMUo",
+        apiKey: "",
         authDomain: "train-scheduler-81a1c.firebaseapp.com",
         databaseURL: "https://train-scheduler-81a1c.firebaseio.com",
         projectId: "train-scheduler-81a1c",
@@ -23,7 +23,16 @@
     var frequency = "";
 
     // Create button click
+    $("#add-train").on("click", function(event){
+        event.preventDefault();
 
+        // Get values entered into input boxes
+        trainName = $("#trainNameInput").val().trim();
+        destination = $("#destinationInput").val().trim();
+        firstTrainTime = $("#firstTrainTime").val().trim();
+        frequency = $("#frequencyInput").val().trim();
+
+    })
     
 
 
