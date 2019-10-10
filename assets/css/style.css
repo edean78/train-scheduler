@@ -1,7 +1,16 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Georgia, 'Times New Roman', Times, 'sans serif';
+    
 }
 
-h1.jumbo-container {
-    text-align: center;
+.jumbotron {
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align:center;
+    color:white;
+    background-color: lightblue;
+    margin:20px 0;
 }
+
+
+
