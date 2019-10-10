@@ -1,11 +1,11 @@
 // Ready the document
 // $(document).ready(function () {
 
-var secure = keyConfig.secureKey;
+// var secure = keyConfig.secureKey;
 
 // Your web app's Firebase configuration
 var config = {
-    apiKey: secure,
+    apiKey: "",
     authDomain: "train-scheduler-81a1c.firebaseapp.com",
     databaseURL: "https://train-scheduler-81a1c.firebaseio.com",
     projectId: "train-scheduler-81a1c",
@@ -93,7 +93,7 @@ database.ref().on("child_added", function (childSnapshot) {
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
-    $("#table-info").append("<tr><td class='glyphicon glyphicon-pencil'>" + "" + "</td><td>" + snapName + "</td><td>" + snapDest + "</td><td>" + snapFreq + "</td><td>" + nextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
+    $("#table-info").append("<tr><td>" + snapName + "</td><td>" + snapDest + "</td><td>" + snapFreq + "</td><td>" + nextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
 });
 
 // });
