@@ -41,46 +41,10 @@
                             <th scope="col">Frequency(min)</th>
                             <th scope="col">Next Arrival</th>
                             <th scope="col">Minutes Away</th>
-                            <th scope="col">Delete</th>
+                            <!-- <th scope="col">Delete</th> -->
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <tbody id="table-info">
                     </tbody>
                 </table>
             </div>
@@ -102,12 +66,12 @@
                             aria-describedby="InputDestination" placeholder="Enter Destination">
                     </div>
                     <div class="form-group">
-                        <label for="firstTrainTime">Frequency(min)</label>
+                        <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
                         <input type="firstTime" class="form-control" id="firstTrainTime"
                             aria-describedby="InputFrequency" placeholder="Enter First Train Time">
                     </div>
                     <div class="form-group">
-                        <label for="frequencyInput">Frequency(min)</label>
+                        <label for="frequencyInput">Frequency (min)</label>
                         <input type="frequency" class="form-control" id="frequencyInput"
                             aria-describedby="InputNextArrival" placeholder="Enter Frequency (min)">
                     </div>
@@ -118,15 +82,24 @@
         </div>
     </div>
 
+
+    <!-- Added link to jquery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <!-- Added link to Firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
     <!-- Added link to moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- Added link to JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added link to javascript file -->
+    <script type="text/javascript" src="assets/javascript/config.js"></script>
 
     <!-- Added link to javascript file -->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
