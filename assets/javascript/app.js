@@ -74,18 +74,19 @@ $(document).ready(function () {
         console.log(snapFreq);
 
         // Create edit and delete button for each row in table
-        // var btnEdit = $("<button>").html("<span class='glyphicon glyphicon-pencil'></span>").
+        var btnEdit = $("<button>").html("<span class='glyphicon glyphicon-pencil'></span>").addClass("editButton").attr("data-key", dataKey);
+        var btnDelete = $("<button>").html("<span class='glyphicon glyphicon-trash'></span>").addClass("deleteButton").attr("data-key", dataKey);
 
         // Current Time
         var currentTime = moment();
         console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
         // First Time (pushed back 1 year to make sure it comes before current time)
-        var firstTimeConverted = moment(snapFirstTime, "HH:mm").subtract(1, "years");
+        var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
         console.log(firstTimeConverted);
 
         // Difference between the times
-        var diffTime = moment().diff(moment(snapFirstTime), "minutes");
+        var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
         console.log("DIFFERENCE IN TIME: " + diffTime);
 
         // Time apart (remainder)
@@ -105,11 +106,13 @@ $(document).ready(function () {
       function addRow() {
         var trainInfo = `
             <tr class="row-${dataKey}">
+                <td>${btnEdit}</td>
                 <td>${snapName}</td>
                 <td>${snapDest}</td>
                 <td>${snapFreq}</td>
                 <td>${nextTrainCalc}</td>
                 <td>${tMinutesTillTrain}</td>
+                <td>${btnDelete}</td>
             </tr>
             `;
 
